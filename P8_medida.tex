@@ -296,7 +296,11 @@
               \end{itemize}
         \item[(e)]  Sea $X$ un conjunto medible Borel tal que $\mu_{g_i}(X) = 0$ para $i = 1$, $\cdots$, $4$ y $\mu$ la medida de Borel. Entonces: \begin{itemize}
                   \item[(i)] $0 = \mu_{g_1}(X) = \int_X 2 \, d\lambda = 2 \cdot \lambda(X) \Rightarrow \lambda(X) = 0 \Rightarrow \mu(X) = 0 \Rightarrow \mu \ll \mu_{g_1}$.
-                  \item[(ii)]
+                  \item[(ii)] Por contrarrecíproco, sea $X$ un conjunto medible Borel tal que $\lambda(A) > 0$, como \begin{align*}
+                        & 1 \geq \frac{1}{x^2 + 1} > 0 \quad \forall x \in \mathbb{R} \Rightarrow \\
+                        & \int_A 1 \, d\lambda = \lambda(A) = \mu(A) \geq \mu_{g_2}(A) = \int_A \frac{1}{x^2 + 1} \, d\lambda > 0 
+                  \end{align*}
+                  Luego, como $\lambda(A) > 0$, se sigue que $\mu(A) > 0$, por lo que $\mu \ll \mu_{g_2}$.
                   \item[(iii)] Consideremos $X = [1\text{, }2]$ medible Borel, luego, vimos que $\mu_{g_3}([1\text{, }2]) = 0$, pero claramente $\mu([1\text{, }2]) = 1 \neq 0$, por lo que $\mu$ no es absolutamente continua respecto a $\mu_{g_3}$.
                   \item[(iv)] Consideremos $X = [-2\text{, }-1]$ medible Borel, luego, vimos que $\mu_{g_4}([-2\text{, }-1]) = 0$, pero claramente $\mu([-2\text{, }-1]) = 1 \neq 0$, por lo que $\mu$ no es absolutamente continua respecto a $\mu_{g_4}$.
               \end{itemize}

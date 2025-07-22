@@ -1,12 +1,12 @@
 # Fdb version 4
-["xdvipdfmx"] 1753150964.40062 "P8_medida.xdv" "P8_medida.pdf" "P8_medida" 1753150964.4408 0
-  "P8_medida.xdv" 1753150964.37114 93000 5d35be78ee9c76dd8663d2b943a7385c "xelatex"
+["xdvipdfmx"] 1753151846.07365 "P8_medida.xdv" "P8_medida.pdf" "P8_medida" 1753151846.12612 0
+  "P8_medida.xdv" 1753151846.03999 94484 767a2b17be6f5819cecee5651ba218bf "xelatex"
   (generated)
   "P8_medida.pdf"
   (rewritten before read)
-["xelatex"] 1753150964.02101 "/home/jordi/Documentos/Medida/P8/P8_medida.tex" "P8_medida.xdv" "P8_medida" 1753150964.44035 0
+["xelatex"] 1753151845.58596 "/home/jordi/Documentos/Medida/P8/P8_medida.tex" "P8_medida.xdv" "P8_medida" 1753151846.12533 0
   "/etc/texmf/web2c/texmf.cnf" 1734915587.16846 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/jordi/Documentos/Medida/P8/P8_medida.tex" 1753150963.76414 24278 e56187067f8c5b2356190e67d2c94858 ""
+  "/home/jordi/Documentos/Medida/P8/P8_medida.tex" 1753151845.35323 24751 1543d481c58452ef83d8bf1e6cfd1d64 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -54,8 +54,8 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1734917373 9215398 8d9bb1d10f113025846460a19d97aee1 ""
-  "P8_medida.aux" 1753150964.37014 194 eeedcc42ed7fd3181b659b82dd599442 "xelatex"
-  "P8_medida.tex" 1753150963.76414 24278 e56187067f8c5b2356190e67d2c94858 ""
+  "P8_medida.aux" 1753151846.03799 194 eeedcc42ed7fd3181b659b82dd599442 "xelatex"
+  "P8_medida.tex" 1753151845.35323 24751 1543d481c58452ef83d8bf1e6cfd1d64 ""
   (generated)
   "P8_medida.aux"
   "P8_medida.log"
