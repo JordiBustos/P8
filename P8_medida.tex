@@ -16,25 +16,25 @@
 \maketitle
 
 \begin{statement}{1}
-    Sea $\mathfrak{X}$ una $\sigma$-álgebra de conjuntos de $X$, $\nu$ una carga sobre $\mathfrak{X}$ y $E \in \mathfrak{X}$. Probar que:
+    Sea \(\mathfrak{X} \) una \(\sigma \)-álgebra de conjuntos de \(X \), \(\nu \) una carga sobre \(\mathfrak{X} \) y \(E \in \mathfrak{X} \). Probar que:
     \begin{itemize}
-        \item[(a)] $\nu^+(E) = \sup\{\nu(F) : F \subset E, F \in \mathfrak{X}\}$
-        \item[(b)] $\nu^-(E) = -\inf\{\nu(F) : F \subset E, F \in \mathfrak{X}\}$
-        \item[(c)] $|\nu|(E) = \sup\left\{\sum_{j=1}^{N} |\nu(A_j)| : A_1, \ldots, A_N \text{ es una partición finita de } E \right\}$
+        \item[(a)] \(\nu^+(E) = \sup\{\nu(F) : F \subset E, F \in \mathfrak{X}\} \)
+        \item[(b)] \(\nu^-(E) = -\inf\{\nu(F) : F \subset E, F \in \mathfrak{X}\} \)
+        \item[(c)] \(|\nu|(E) = \sup\left\{\sum_{j=1}^{N} |\nu(A_j)| : A_1, \ldots, A_N \text{ es una partición finita de } E \right\} \)
     \end{itemize}
 \end{statement}
 
 \begin{proof}
     \begin{itemize}
-        \item[(a)] Sea $E \in \mathfrak{X}$, $\nu^+(E) = \nu(E \cap P)$, donde $P$ es el de la descomposición de Hahn. Luego, \begin{align*}
+        \item[(a)] Sea \(E \in \mathfrak{X} \), \(\nu^+(E) = \nu(E \cap P) \), donde \(P \) es el de la descomposición de Hahn. Luego, \begin{align*}
                   E \cap P \subseteq E \Rightarrow \nu(E \cap P) = \nu^+(E) \leq \sup \{ \nu(F) : F \subseteq E \text{, } F \in \mathfrak{X} \}
-              \end{align*} Además, si $F \in \mathfrak{X}$, tal que $F \subseteq E$ \begin{align*}
+              \end{align*} Además, si \(F \in \mathfrak{X} \), tal que \(F \subseteq E \) \begin{align*}
                   \nu(F) = \nu(F \cap P) + \nu(F \cap N) \leq \nu(F \cap P) = \nu^+(F) \leq \nu^+(E).
               \end{align*} Por lo tanto, \begin{align*}
                   \nu^+(E) = \sup\{\nu(F) : F \subset E, F \in \mathfrak{X}\}.
               \end{align*}
-        \item[(b)] Similar al caso anterior, se tiene que $\nu^-(E) = -\inf\{\nu(F) : F \subset E, F \in \mathfrak{X}\}$.
-        \item[(c)] Sea $E \in \mathfrak{X}$, entonces $E$ es una partición finita de sí mismo, por lo que \begin{align*}
+        \item[(b)] Similar al caso anterior, se tiene que \(\nu^-(E) = -\inf\{\nu(F) : F \subset E, F \in \mathfrak{X}\} \).
+        \item[(c)] Sea \(E \in \mathfrak{X} \), entonces \(E \) es una partición finita de sí mismo, por lo que \begin{align*}
                   |\nu|(E) \leq \sup\left\{\sum_{j=1}^{N} |\nu(A_j)| : A_1, \ldots, A_N \text{ es una partición finita de } E \right\}
               \end{align*} Además, como la partición es disjunta se tiene que \begin{align*}
                   \sum_{i = 1}^N|\nu|(A_i) = \sum_{i = 1}^N \nu^+(A_i) + \nu^-(A_i) = |\nu|(E) \quad \forall E \in \mathfrak{X} \text{y toda partición finita}.
@@ -45,59 +45,59 @@
 \end{proof}
 
 \begin{statement}{2}
-    Sean $\mu$ y $\nu$ medidas finitas sobre $(X, \mathfrak{X})$. Probar que $\nu \ll \mu$ si y solo si para todo $\varepsilon > 0$ existe $\delta > 0$ tal que si $E \in \mathfrak{X}$ y $\mu(E) < \delta$, entonces $\nu(E) < \varepsilon$. \\
-    Probar también que la hipótesis de que $\nu$ sea finita no puede omitirse. Para ello, considerar $((0,1), \mathfrak{L})$, $\mu$ la medida de Lebesgue restringida y $\nu(E) := \int_E \frac{1}{t} \, d\mu$.
+    Sean \(\mu \) y \(\nu \) medidas finitas sobre \((X, \mathfrak{X}) \). Probar que \(\nu \ll \mu \) si y solo si para todo \(\varepsilon > 0 \) existe \(\delta > 0 \) tal que si \(E \in \mathfrak{X} \) y \(\mu(E) < \delta \), entonces \(\nu(E) < \varepsilon \). \\
+    Probar también que la hipótesis de que \(\nu \) sea finita no puede omitirse. Para ello, considerar \(((0,1), \mathfrak{L}) \), \(\mu \) la medida de Lebesgue restringida y \(\nu(E) := \int_E \frac{1}{t} \, d\mu \).
 \end{statement}
 
 \begin{proof}
-    Si $\forall \varepsilon > 0$ existe $\delta > 0$ tal que si $E \in \mathfrak{X}$ y $\mu(E) < \delta$, entonces $\nu(E) < \varepsilon$, si $\mu(E) = 0$, se sigue que $\nu(E) < \varepsilon$ para todo $\varepsilon > 0$. Luego, $\nu \ll \mu$. \\
-    Para la otra dirección, supongamos que existe un $\varepsilon > 0$ y una sucesión $(E_n)_{n \geq 1} \subseteq \mathfrak{X}$ tal que $\mu(E_n) < \frac{1}{2^n}$ y $\nu(E_n) \geq \varepsilon \quad \forall n \in \mathbb{N}$. Sea
-    $F_n = \bigcup_{i \geq n} E_i$, entonces $\mu(F_n) < \mu(E_n) < \frac{1}{2^n}$ y $\nu(F_n) \geq \varepsilon$. Como $(F_n)_{n \geq 1}$ es una sucesión decreciente de conjuntos medibles tenemos que \begin{align*}
+    Si \(\forall \varepsilon > 0 \) existe \(\delta > 0 \) tal que si \(E \in \mathfrak{X} \) y \(\mu(E) < \delta \), entonces \(\nu(E) < \varepsilon \), si \(\mu(E) = 0 \), se sigue que \(\nu(E) < \varepsilon \) para todo \(\varepsilon > 0 \). Luego, \(\nu \ll \mu \). \\
+    Para la otra dirección, supongamos que existe un \(\varepsilon > 0 \) y una sucesión \((E_n)_{n \geq 1} \subseteq \mathfrak{X} \) tal que \(\mu(E_n) < \frac{1}{2^n} \) y \(\nu(E_n) \geq \varepsilon \quad \forall n \in \mathbb{N} \). Sea
+    \(F_n = \bigcup_{i \geq n} E_i \), entonces \(\mu(F_n) < \mu(E_n) < \frac{1}{2^n} \) y \(\nu(F_n) \geq \varepsilon \). Como \((F_n)_{n \geq 1} \) es una sucesión decreciente de conjuntos medibles tenemos que \begin{align*}
         \mu \left (\bigcap_{n \geq 1} F_n \right) = \lim_{n \to \infty} \mu(F_n) = 0 \\
         \nu \left (\bigcap_{n \geq 1} F_n \right) = \lim_{n \to \infty} \nu(F_n) \geq \varepsilon.
     \end{align*}
-    Por lo tanto $\nu$ no es absolutamente continua respecto a $\mu$. \\
-    Para el ejemplo, consideremos $((0,1), \mathfrak{L})$, $\mu = \lambda$ la medida de Lebesgue restringida y $\nu(E) := \int_E \frac{1}{t} \, d\lambda$. \\
-    Notemos que $\nu \ll \lambda$, ya que si $E \in \mathfrak{L}$ y $\lambda(E) = 0$, entonces $\nu(E) = \int_E \frac{1}{t} \, d\lambda = 0$. \\
-    Sea $\varepsilon > 0$, no vale que $\exists \delta > 0$ tal que si $E \in \mathfrak{L}$ y $\lambda(E) < \delta$, entonces $\nu(E) < \varepsilon$. En efecto, si tomamos $E = (0, \delta - 1/n$), entonces $\lambda(E) = \delta - 1/n < \delta$, pero $\int_{[0\text{, } \delta - 1/n]} \frac{1}{t} \, d\lambda = +\infty$ para todo $\delta > 0$, luego no vale la proposición.
+    Por lo tanto \(\nu \) no es absolutamente continua respecto a \(\mu \). \\
+    Para el ejemplo, consideremos \(((0,1), \mathfrak{L}) \), \(\mu = \lambda \) la medida de Lebesgue restringida y \(\nu(E) := \int_E \frac{1}{t} \, d\lambda \). \\
+    Notemos que \(\nu \ll \lambda \), ya que si \(E \in \mathfrak{L} \) y \(\lambda(E) = 0 \), entonces \(\nu(E) = \int_E \frac{1}{t} \, d\lambda = 0 \). \\
+    Sea \(\varepsilon > 0 \), no vale que \(\exists \delta > 0 \) tal que si \(E \in \mathfrak{L} \) y \(\lambda(E) < \delta \), entonces \(\nu(E) < \varepsilon \). En efecto, si tomamos \(E = (0, \delta - 1/n \)), entonces \(\lambda(E) = \delta - 1/n < \delta \), pero \(\int_{[0\text{, } \delta - 1/n]} \frac{1}{t} \, d\lambda = +\infty \) para todo \(\delta > 0 \), luego no vale la proposición.
 \end{proof}
 
 \begin{statement}{3}
-    Mostrar que un conjunto $M$ es nulo para una carga $\lambda$ si y sólo si $|\lambda|(M) = 0$.
+    Mostrar que un conjunto \(M \) es nulo para una carga \(\lambda \) si y sólo si \(|\lambda|(M) = 0 \).
 \end{statement}
 
 \begin{proof}
-    Si $M$ es nulo para una carga $\lambda$, entonces $\lambda(M \cap E) = 0 \quad \forall E \in \mathfrak{X}$. En particular, para $P$, $N \in \mathfrak{X}$ de la descomposición de Hahn,
-    entonces $|\lambda(M)| = \lambda^+(M) + \lambda^-(M) = \lambda(M \cap P) + \lambda(M \cap N) = 0 + 0 = 0$. Por lo tanto, $|\lambda|(M) = 0$. \\
-    Para la otra dirección, si $|\lambda|(M) = 0$, entonces $\lambda^+(M) = \lambda^-(M)$, por lo que $\lambda^+(M) = \lambda^-(M) = 0$ y debe ser $\lambda(M \cap P) = 0 = \lambda(M \cap N)$. Luego, \begin{align*}
+    Si \(M \) es nulo para una carga \(\lambda \), entonces \(\lambda(M \cap E) = 0 \quad \forall E \in \mathfrak{X} \). En particular, para \(P \), \(N \in \mathfrak{X} \) de la descomposición de Hahn,
+    entonces \(|\lambda(M)| = \lambda^+(M) + \lambda^-(M) = \lambda(M \cap P) + \lambda(M \cap N) = 0 + 0 = 0 \). Por lo tanto, \(|\lambda|(M) = 0 \). \\
+    Para la otra dirección, si \(|\lambda|(M) = 0 \), entonces \(\lambda^+(M) = \lambda^-(M) \), por lo que \(\lambda^+(M) = \lambda^-(M) = 0 \) y debe ser \(\lambda(M \cap P) = 0 = \lambda(M \cap N) \). Luego, \begin{align*}
         \lambda(M \cap E) = \lambda(M \cap E \cap P) + \lambda(M \cap E \cap N) = 0 + 0 = 0 \quad \forall E \in \mathfrak{X}
     \end{align*}
 \end{proof}
 
 \begin{statement}{4}
-    Sean $\mu_1, \mu_2$ y $\mu_3$ medidas en $(X, \mathfrak{X})$. Probar que:
+    Sean \(\mu_1, \mu_2 \) y \(\mu_3 \) medidas en \((X, \mathfrak{X}) \). Probar que:
     \begin{itemize}
-        \item[(a)] $\mu_1 \ll \mu_1$
-        \item[(b)] $\mu_1 \ll \mu_2$ y $\mu_2 \ll \mu_3$ implican que $\mu_1 \ll \mu_3$
-        \item[(c)] Dar un ejemplo de que $\mu_1 \ll \mu_2$ no implica $\mu_2 \ll \mu_1$.
+        \item[(a)] \(\mu_1 \ll \mu_1 \)
+        \item[(b)] \(\mu_1 \ll \mu_2 \) y \(\mu_2 \ll \mu_3 \) implican que \(\mu_1 \ll \mu_3 \)
+        \item[(c)] Dar un ejemplo de que \(\mu_1 \ll \mu_2 \) no implica \(\mu_2 \ll \mu_1 \).
     \end{itemize}
 
 \end{statement}
 
 \begin{proof}
     \begin{itemize}
-        \item[(a)] Sea $E \in \mathfrak{X}$ tal que $\mu_1(E) = 0$. Entonces $\mu_1(E) = 0$, luego $\mu_1 \ll \mu_1$.
-        \item[(b)] Sea $E \in \mathfrak{X}$ tal que $\mu_3(E) = 0$, entonces $\mu_2(E) = 0$ por la hipótesis $\mu_2 \ll \mu_3$. Luego, como $\mu_1 \ll \mu_2$, se tiene que $\mu_1(E) = 0$. Por lo tanto, $\mu_1 \ll \mu_3$.
+        \item[(a)] Sea \(E \in \mathfrak{X} \) tal que \(\mu_1(E) = 0 \). Entonces \(\mu_1(E) = 0 \), luego \(\mu_1 \ll \mu_1 \).
+        \item[(b)] Sea \(E \in \mathfrak{X} \) tal que \(\mu_3(E) = 0 \), entonces \(\mu_2(E) = 0 \) por la hipótesis \(\mu_2 \ll \mu_3 \). Luego, como \(\mu_1 \ll \mu_2 \), se tiene que \(\mu_1(E) = 0 \). Por lo tanto, \(\mu_1 \ll \mu_3 \).
         \item[(c)] Cualquier medida con la medida nula es un ejemplo.
     \end{itemize}
 \end{proof}
 
 \begin{statement}{5}
-    Sea $\mu$ una medida finita, $\lambda \ll \mu$, y sean $P_n, N_n$ una descomposición de Hahn para $\lambda - n\mu$. Si
+    Sea \(\mu \) una medida finita, \(\lambda \ll \mu \), y sean \(P_n, N_n \) una descomposición de Hahn para \(\lambda - n\mu \). Si
     \[
         P = \bigcap_{n \in \mathbb{N}} P_n, \quad N = \bigcup_{n \in \mathbb{N}} N_n,
     \]
-    mostrar que $N$ es $\sigma$-finito para $\lambda$ y que si $E \subset P$, $E \in \mathfrak{X}$, entonces o bien $\lambda(E) = 0$ o $\lambda(E) = \infty$.
+    mostrar que \(N \) es \(\sigma \)-finito para \(\lambda \) y que si \(E \subset P \), \(E \in \mathfrak{X} \), entonces o bien \(\lambda(E) = 0 \) o \(\lambda(E) = \infty \).
 \end{statement}
 
 \begin{proof}
@@ -105,57 +105,57 @@
          & (\lambda - n \cdot \mu)(X \cap N_n) \leq 0                                                   \\
          & \lambda(N_n) - n \cdot \mu(N_n) \leq 0                                                       \\
          & \lambda(N_n) \leq n \cdot \mu(N_n) < n \cdot \mu(X) < +\infty \quad \forall n \in \mathbb{N}
-    \end{align*} y $N = \bigcup_{n \geq 1} N_n$, podemos asumir disjuntos, luego $N$ es $\sigma$-finito para $\lambda$. \\
-    Sea $E \subseteq P$, $E \in \mathfrak{X}$. Entonces $E \subseteq P_n \quad \forall n \in \mathbb{N}$, por lo que \begin{align*}
+    \end{align*} y \(N = \bigcup_{n \geq 1} N_n \), podemos asumir disjuntos, luego \(N \) es \(\sigma \)-finito para \(\lambda \). \\
+    Sea \(E \subseteq P \), \(E \in \mathfrak{X} \). Entonces \(E \subseteq P_n \quad \forall n \in \mathbb{N} \), por lo que \begin{align*}
          & (\lambda - n \cdot \mu)(E) = \lambda(E) - n \cdot \mu(E) \geq 0 \quad \forall n \in \mathbb{N} \\
          & \lambda(E) \geq n \cdot \mu(E) \quad \forall n \in \mathbb{N}
-    \end{align*} Entonces, si $n \to +\infty$ se tiene que $\lambda(E) = +\infty$ o, si $\mu(E) = 0$, entonces $\lambda(E) = 0$ por ser absolutamente continua con respecto a $\mu$.
+    \end{align*} Entonces, si \(n \to +\infty \) se tiene que \(\lambda(E) = +\infty \) o, si \(\mu(E) = 0 \), entonces \(\lambda(E) = 0 \) por ser absolutamente continua con respecto a \(\mu \).
 \end{proof}
 
 \begin{statement}{6}
-    Sean $X := [0,1]$ y $\mathfrak{X}$ la $\sigma$-álgebra de Borel. Mostrar que si $\mu$ es la medida de conteo sobre $\mathfrak{X}$ y $\lambda$ es la medida de Lebesgue sobre $\mathfrak{X}$, entonces $\lambda$ es finita y $\lambda \ll \mu$, pero no vale la conclusión del Teorema de Radon–Nikodym.
+    Sean \(X := [0,1] \) y \(\mathfrak{X} \) la \(\sigma \)-álgebra de Borel. Mostrar que si \(\mu \) es la medida de conteo sobre \(\mathfrak{X} \) y \(\lambda \) es la medida de Lebesgue sobre \(\mathfrak{X} \), entonces \(\lambda \) es finita y \(\lambda \ll \mu \), pero no vale la conclusión del Teorema de Radon–Nikodym.
 \end{statement}
 
 \begin{proof}
-    Claramente, $\lambda([0\text{, }1]) = 1 < +\infty$ y $\mu(E) = 0 \iff E = \varnothing \Rightarrow \lambda(E) = \lambda(\varnothing) = 0 \Rightarrow \lambda \ll \mu$. Supongamos que vale el TRN, entonces existe una función $f \in M^+(X\text{, } \mathfrak{X})$ tal que \begin{align*}
+    Claramente, \(\lambda([0\text{, }1]) = 1 < +\infty \) y \(\mu(E) = 0 \iff E = \varnothing \Rightarrow \lambda(E) = \lambda(\varnothing) = 0 \Rightarrow \lambda \ll \mu \). Supongamos que vale el TRN, entonces existe una función \(f \in M^+(X\text{, } \mathfrak{X}) \) tal que \begin{align*}
         \int_E f \, d\mu & = \lambda(E) \quad \forall E \in \mathfrak{X}. \\
-    \end{align*} Sea $x \in [0\text{, }1]$, entonces $E = \{x\} \in \mathcal{B}$. Tenemos que \begin{align*}
+    \end{align*} Sea \(x \in [0\text{, }1] \), entonces \(E = \{x\} \in \mathcal{B} \). Tenemos que \begin{align*}
         \int_{\{x\}} f \, d\mu & = \lambda(\{x\}) = \int f \chi_{\{x\}} \, d\mu                  \\
                                & = f(x) \mu(\{x\}) = f(x) = 0 \quad \forall x \in [0\text{, }1].
-    \end{align*} Por lo tanto, $f(x) = 0 \quad \forall x \in [0\text{, }1]$, pero $(0\text{, }1) \in \mathcal{B}$, $\lambda((0\text{, }1)) = 1 \neq \int_{(0\text{, }1)} 0 \, d\mu = 0$.
+    \end{align*} Por lo tanto, \(f(x) = 0 \quad \forall x \in [0\text{, }1] \), pero \((0\text{, }1) \in \mathcal{B} \), \(\lambda((0\text{, }1)) = 1 \neq \int_{(0\text{, }1)} 0 \, d\mu = 0 \).
 \end{proof}
 
 \begin{statement}{7}
-    Sean $\mu$ y $\nu$ medidas $\sigma$-finitas definidas en $(X, \mathfrak{X})$ y sea $f$ la derivada de Radon–Nikodym de $\nu$ con respecto a $\mu$. Probar que para toda función $g \in \mathfrak{M}^+(X, \mathfrak{X})$ se tiene que:
+    Sean \(\mu \) y \(\nu \) medidas \(\sigma \)-finitas definidas en \((X, \mathfrak{X}) \) y sea \(f \) la derivada de Radon–Nikodym de \(\nu \) con respecto a \(\mu \). Probar que para toda función \(g \in \mathfrak{M}^+(X, \mathfrak{X}) \) se tiene que:
     \[
         \int g \, d\nu = \int gf \, d\mu.
     \]
 \end{statement}
 
 \begin{proof}
-    Sea $\phi = \sum_{i = 1}^n a_i \chi_{E_i}$ una función simple con $a_i \geq 0$, entonces \begin{align*}
+    Sea \(\phi = \sum_{i = 1}^n a_i \chi_{E_i} \) una función simple con \(a_i \geq 0 \), entonces \begin{align*}
          & \int \phi \, d\nu = \sum_{i = 1}^n a_i \nu(E_i) = \sum_{i = 1}^n a_i \int_{E_i} f \, d\mu                         \\
          & \sum_{i = 1}^n a_i \int \chi_{E_i} f \, d\mu = \int \sum_{i = 1}^n a_i \chi_{E_i} f \, d\mu = \int \phi f \, d\mu
     \end{align*}
-    Sea $(\phi_n)_{n \geq 1}$ una sucesión de funciones simples crecientes, no negativas, que converge puntualmente a $g$. Entonces $(\phi_n \cdot f)_{n \geq 1}$ es una sucesión
-    de funciones no negativas que convergen puntualmente a $g \cdot f$. Aplicando TCM dos veces se obtiene: \begin{align*}
+    Sea \((\phi_n)_{n \geq 1} \) una sucesión de funciones simples crecientes, no negativas, que converge puntualmente a \(g \). Entonces \((\phi_n \cdot f)_{n \geq 1} \) es una sucesión
+    de funciones no negativas que convergen puntualmente a \(g \cdot f \). Aplicando TCM dos veces se obtiene: \begin{align*}
         \int g \, d \nu = \lim \int \phi_n \, d \nu = \lim \int \phi_n f \, d\mu = \int g f \, d\mu.
     \end{align*}
 \end{proof}
 
 \begin{statement}{8}
-    Todas las medidas consideradas a continuación sobre $(X, \mathfrak{X})$ son $\sigma$-finitas. Probar que:
+    Todas las medidas consideradas a continuación sobre \((X, \mathfrak{X}) \) son \(\sigma \)-finitas. Probar que:
 
     \begin{itemize}
-        \item[(a)] Si $\alpha \ll \beta$ y $\beta \ll \mu$, entonces $\alpha \ll \mu$ y
+        \item[(a)] Si \(\alpha \ll \beta \) y \(\beta \ll \mu \), entonces \(\alpha \ll \mu \) y
               \[
                   \frac{d\alpha}{d\mu} = \frac{d\alpha}{d\beta} \cdot \frac{d\beta}{d\mu} \quad \mu\text{-c.t.p.}
               \]
-        \item[(b)] Si $\nu_1 \ll \mu$ y $\nu_2 \ll \mu$, entonces
+        \item[(b)] Si \(\nu_1 \ll \mu \) y \(\nu_2 \ll \mu \), entonces
               \[
                   \frac{d(\nu_1 + \nu_2)}{d\mu} = \frac{d\nu_1}{d\mu} + \frac{d\nu_2}{d\mu} \quad \mu\text{-c.t.p.}
               \]
-        \item[(c)] Si $\nu \ll \mu$ y $\mu \ll \nu$, entonces
+        \item[(c)] Si \(\nu \ll \mu \) y \(\mu \ll \nu \), entonces
               \[
                   \frac{d\nu}{d\mu} = \left( \frac{d\mu}{d\nu} \right)^{-1} \mu\text{-c.t.p y } \nu\text{-c.t.p.}
               \]
@@ -167,19 +167,19 @@
         \item[(a)] La primera parte ya la vimos (ejercicio 4.c), para la segunda: Notemos que, por TRN, \begin{align*}
                    & \alpha(E) = \int_E h \, d\mu \text{, } \quad \alpha(E) = \int_E f \, d\beta \quad \text{y } \quad \beta(E) = \int_E g \, d\mu
               \end{align*}
-              Con $h$, $f$, $g$ las derivadas de Radon-Nikodym. Además, aplicando el ejercicio 7 en * tenemos que: \begin{align*}
+              Con \(h \), \(f \), \(g \) las derivadas de Radon-Nikodym. Además, aplicando el ejercicio 7 en * tenemos que: \begin{align*}
                    & \int_E h \, d\mu = \int_E f \, d\beta =^* \int_E f g \, d\mu  \\
                    & \iff \int_E h - fg d \mu = 0 \quad \forall E \in \mathfrak{X} \\
                    & \iff h = fg \quad \mu\text{-c.t.p.}
               \end{align*}
-        \item[(b)] Por TRN, $\nu_1(E) = \int_E f_1 \, d\mu$ y $\nu_2(E) = \int_E f_2 \, d\mu$, donde $f_1$, $f_2$ son las derivadas de Radon–Nikodym. Entonces, \begin{align*}
+        \item[(b)] Por TRN, \(\nu_1(E) = \int_E f_1 \, d\mu \) y \(\nu_2(E) = \int_E f_2 \, d\mu \), donde \(f_1 \), \(f_2 \) son las derivadas de Radon–Nikodym. Entonces, \begin{align*}
                   (\nu_1 + \nu_2)(E) & = \int_E f_1 \, d\mu + \int_E f_2 \, d\mu = \int_E (f_1 + f_2) \, d\mu.
               \end{align*}
-              Además, por TRN sobre $\nu_1 + \nu_2$, existe $f$ tal que \begin{align*}
+              Además, por TRN sobre \(\nu_1 + \nu_2 \), existe \(f \) tal que \begin{align*}
                   (\nu_1 + \nu_2)(E) & = \int_E f \, d\mu \quad \forall E \in \mathfrak{X} \\
                                      & = \int_E (f_1 + f_2) \, d\mu.
               \end{align*}
-              Por lo tanto, $f = f_1 + f_2$ $\mu$-c.t.p. y $\frac{d(\nu_1 + \nu_2)}{d\mu} = \frac{d\nu_1}{d\mu} + \frac{d\nu_2}{d\mu}$ $\mu$-c.t.p.
+              Por lo tanto, \(f = f_1 + f_2 \) \(\mu \)-c.t.p. y \(\frac{d(\nu_1 + \nu_2)}{d\mu} = \frac{d\nu_1}{d\mu} + \frac{d\nu_2}{d\mu} \) \(\mu \)-c.t.p.
         \item[(c)] Por TRN \begin{align*}
                    & \mu(A) = \int_A \frac{d\mu}{d\nu} \, d\nu \quad \forall A \in \mathfrak{X} \\
                    & \nu(A) = \int_A \frac{d\nu}{d\mu} \, d\mu \quad \forall A \in \mathfrak{X} \\
@@ -191,15 +191,15 @@
 \end{proof}
 
 \begin{statement}{9}
-    Probar que si $\lambda$ y $\mu$ son medidas, con $\lambda \ll \mu$ y $\lambda \perp \mu$ entonces $\lambda = 0$.
+    Probar que si \(\lambda \) y \(\mu \) son medidas, con \(\lambda \ll \mu \) y \(\lambda \perp \mu \) entonces \(\lambda = 0 \).
 \end{statement}
 
 \begin{proof}
-    Por hipótesis, existen $A$, $B \subseteq X$ tales que $X = A \cup B$, $A \cap B = \varnothing$, $\lambda(A) = \mu(B) = 0$. Luego, como $\lambda \ll \mu$ se tiene que $\lambda(B) = 0$. Por lo tanto $\lambda(X) = \lambda(A) + \lambda(B) = 0 + 0 = 0$. Así que $\lambda(A) = 0 \quad \forall A \in \mathfrak{X}$.
+    Por hipótesis, existen \(A \), \(B \subseteq X \) tales que \(X = A \cup B \), \(A \cap B = \varnothing \), \(\lambda(A) = \mu(B) = 0 \). Luego, como \(\lambda \ll \mu \) se tiene que \(\lambda(B) = 0 \). Por lo tanto \(\lambda(X) = \lambda(A) + \lambda(B) = 0 + 0 = 0 \). Así que \(\lambda(A) = 0 \quad \forall A \in \mathfrak{X} \).
 \end{proof}
 
 \begin{statement}{10}
-    Considere las siguientes funciones $g_i : [a\text{, }b] \to \mathbb{R}$ y sus correspondientes medidas de Borel–Stieltjes (halladas en el ejercicio 13 de la práctica 3):
+    Considere las siguientes funciones \(g_i : [a\text{, }b] \to \mathbb{R} \) y sus correspondientes medidas de Borel–Stieltjes (halladas en el ejercicio 13 de la práctica 3):
 
     \begin{align*}
         g_1(x) & := 2x                      \\
@@ -225,40 +225,40 @@
 
 \begin{proof}
     \begin{itemize}
-        \item[(a)] Sea $g : [a \text{, }b] \to \mathbb{R}$. Decimos que $g$ es $\textbf{absolutamente continua}$ si \begin{align*}
-                   & \forall (\varepsilon > 0) \, (\exists \delta > 0) \text{ tal que } \forall (a_i\text{, } b_i)_{i = 1}^n \text{ partición finita disjunta de } [a\text{, }b] \\
+        \item[(a)] Sea \(g : [a \text{, }b] \to \mathbb{R} \). Decimos que \(g \) es \(\textbf{absolutamente continua} \) si \begin{align*}
+                   & \forall (\varepsilon > 0) \, (\exists \delta > 0) \text{ tal que } \forall (a_i\text{, } b_i)_{i = 1}^n \text{ colección de intervalos contenida en } [a\text{, }b] \\
                    & \sum_{i = 1}^n |b_i - a_i| < \delta \Rightarrow \sum_{i = 1}^n |g(b_i) - g(a_i)| < \varepsilon
               \end{align*}
-              Por el $\textbf{Teorema 6.3.6}$ de $\textit{An introduction to measure and integration - Rana}$, también vale que $g$ es absolutamente continua si \begin{align*}
+              Por el \(\textbf{Teorema 6.3.6} \) de \(\textit{An introduction to measure and integration - Rana} \), también vale que \(g \) es absolutamente continua si \begin{align*}
                   g(x) = \int_a^x f(t) \, d\lambda(t) \quad \forall x \in [a\text{, }b] \text{ y } f \in \mathcal{L}_1([a\text{, }b])
               \end{align*}
-              O equivalentemente si $g$ es diferenciable en casi todo punto de $[a\text{, }b]$, su derivada es integrable y \begin{align*}
+              O equivalentemente si \(g \) es diferenciable en casi todo punto de \([a\text{, }b] \), su derivada es integrable y \begin{align*}
                   g(x) = \int_a^x g'(t) \, d\lambda(t) \quad \forall x \in [a\text{, }b]
               \end{align*}
-              El $\textbf{Teorema 9.1.5}$ del Rana nos dice que si $F: \mathbb{R} \to \mathbb{R}$ es una función monótona creciente y absolutamente continua, entonces la medida de Lebesgue-Stieltjes inducida por $F$ es absolutamente continua con la medida de Lebesgue si y solo si $F$ es continua en cada intervalo acotado.
+              El \(\textbf{Teorema 9.1.5} \) del Rana nos dice que si \(F: \mathbb{R} \to \mathbb{R} \) es una función monótona creciente y absolutamente continua, entonces la medida de Lebesgue-Stieltjes inducida por \(F \) es absolutamente continua con la medida de Lebesgue si y solo si \(F \) es continua en cada intervalo acotado.
               \begin{itemize}
-                  \item[(i)] $g_1$ es absolutamente continua tomando $\delta = \varepsilon / 2$ en la definición, monótona creciente y continua en $\mathbb{R}$, por el $\textbf{Teorema 9.1.5}$ del Rana se sigue que $\mu_{g_1} \ll \lambda$.
-                  \item[(ii)] $g_2$ es absolutamente continua, ya que su derivada es $f(x) = \frac{1}{x^2+1}$ que es integrable en $[a\text{, }b]$, luego por el $\textbf{Teorema 9.1.5}$ del Rana $\mu_{g_2} \ll \lambda$.
-                  \item[(iii)] Como la continuidad absoluta implica la continuidad ordinaria, se sigue que $g_3$ no es absolutamente continua, pues no es continua en el origen, luego existe un intervalo acotado e.g $[-1\text{, }1]$ tal que $g_3$ no es continua y entonces por el $\textbf{Teorema 9.1.5}$ del Rana se sigue que $\mu_{g_3}$ no es absolutamente continua con respecto a $\lambda$.
-                  \item[(iv)] $g_4$ es absolutamente continua, pues es diferenciable en $[a \text{, }b] \setminus \{0\}$, su derivada es \begin{align*}
+                  \item[(i)] \(g_1 \) es absolutamente continua tomando \(\delta = \varepsilon / 2 \) en la definición, monótona creciente y continua en \(\mathbb{R} \), por el \(\textbf{Teorema 9.1.5} \) del Rana se sigue que \(\mu_{g_1} \ll \lambda \).
+                  \item[(ii)] \(g_2 \) es absolutamente continua, ya que su derivada es \(f(x) = \frac{1}{x^2+1} \) que es integrable en \([a\text{, }b] \), luego por el \(\textbf{Teorema 9.1.5} \) del Rana \(\mu_{g_2} \ll \lambda \).
+                  \item[(iii)] Como la continuidad absoluta implica la continuidad ordinaria, se sigue que \(g_3 \) no es absolutamente continua, pues no es continua en el origen, luego existe un intervalo acotado e.g \([-1\text{, }1] \) tal que \(g_3 \) no es continua y entonces por el \(\textbf{Teorema 9.1.5} \) del Rana se sigue que \(\mu_{g_3} \) no es absolutamente continua con respecto a \(\lambda \).
+                  \item[(iv)] \(g_4 \) es absolutamente continua, pues es diferenciable en \([a \text{, }b] \setminus \{0\} \), su derivada es \begin{align*}
                             g_4'(x) = \begin{cases}
                                           0 & \text{si } x < 0 \\
                                           1 & \text{si } x > 0
                                       \end{cases}
-                        \end{align*} y además, supongamos $a < 0$, \begin{align*}
+                        \end{align*} y además, supongamos \(a < 0 \), \begin{align*}
                             g_4(x) & = \int_a^0 g_4'(t) \, d\lambda(t) + \int_0^x g_4'(t) \, d\lambda(t)                      \\
                                    & = \int_a^0 0 \, d\lambda(t) + \int_0^x 1 \, d\lambda(t) = x \quad \forall x > 0          \\
                                    & = \int_a^x g_4'(t) \, d\lambda(t) = \int_a^x 0 \, d\lambda(t) = 0 \quad \forall x \leq 0
                         \end{align*}
-                        Análogamente, de la continuidad y la monotonía deducimos que $\mu_{g_4} \ll \lambda$.
+                        Análogamente, de la continuidad y la monotonía deducimos que \(\mu_{g_4} \ll \lambda \).
               \end{itemize}
-        \item[(b)] Por el ejemplo $\textbf{9.1.17}$, también del Rana, se tiene que si $F: \mathbb{R} \to \mathbb{R}$ es una función monótonamente creciente y absolutamente continua y $\mu_F$ la medida de Lebesgue-Stieltjes inducida por $F$ en $(\mathbb{R}\text{, } \mathcal{B})$,
-              entonces $\mu_F \ll \lambda$ y \begin{align*}
+        \item[(b)] Por el ejemplo \(\textbf{9.1.17} \), también del Rana, se tiene que si \(F: \mathbb{R} \to \mathbb{R} \) es una función monótonamente creciente y absolutamente continua y \(\mu_F \) la medida de Lebesgue-Stieltjes inducida por \(F \) en \((\mathbb{R}\text{, } \mathcal{B}) \),
+              entonces \(\mu_F \ll \lambda \) y \begin{align*}
                   \frac{d\mu_F}{d\lambda}(x) = F'(x) \quad \lambda\text{-c.t.p.}
               \end{align*}
               \begin{itemize}
-                  \item[(i)] $g_1$ es monótonamente creciente y absolutamente continua, por lo que $\frac{d\mu_{g_1}}{d\lambda}(x) = 2 \quad \lambda\text{-c.t.p.}$
-                  \item[(ii)] $g_2$ es monótonamente creciente y absolutamente continua, por lo que $\frac{d\mu_{g_2}}{d\lambda}(x) = \frac{1}{x^2 + 1} \quad \lambda\text{-c.t.p.}$
+                  \item[(i)] \(g_1 \) es monótonamente creciente y absolutamente continua, por lo que \(\frac{d\mu_{g_1}}{d\lambda}(x) = 2 \quad \lambda\text{-c.t.p.} \)
+                  \item[(ii)] \(g_2 \) es monótonamente creciente y absolutamente continua, por lo que \(\frac{d\mu_{g_2}}{d\lambda}(x) = \frac{1}{x^2 + 1} \quad \lambda\text{-c.t.p.} \)
                   \item[(iii)] Notemos que \begin{align*}\mu_{g_3}((a\text{, }b]) = g_3(b) - g_3(a) = \begin{cases}
                                                                              0 & \text{si } a < b < 0    \\
                                                                              1 & \text{si } a \leq 0 < b \\
@@ -268,8 +268,8 @@
                             \lambda\left( \bigcap_{n \geq 1} (-\frac{1}{n}\text{, }\frac{1}{n}] \right) = \lim_{n \to +\infty} \lambda((  -\frac{1}{n}\text{, }\frac{1}{n}]) = \lim_{n \to +\infty} \frac{2}{n} = 0
                         \end{align*} pero \begin{align*}
                             \mu_{g_3}\left( \bigcap_{n \geq 1} (-\frac{1}{n}\text{, }\frac{1}{n}] \right) = \lim_{n \to +\infty} \mu_{g_3}((-\frac{1}{n}\text{, }\frac{1}{n}]) = 1
-                        \end{align*} $\therefore \mu_{g_3}$ no es absolutamente continua con respecto a $\lambda$ y no tiene derivada de Radon–Nikodym.
-                  \item[(iv)] $g_4$ es monótonamente creciente y absolutamente continua, por lo que \begin{align*}
+                        \end{align*} \(\therefore \mu_{g_3} \) no es absolutamente continua con respecto a \(\lambda \) y no tiene derivada de Radon–Nikodym.
+                  \item[(iv)] \(g_4 \) es monótonamente creciente y absolutamente continua, por lo que \begin{align*}
                             \frac{d\mu_{g_4}}{d\lambda}(x) = \begin{cases}
                                                                  0 & \text{si } x < 0 \\
                                                                  1 & \text{si } x > 0
@@ -277,48 +277,82 @@
                         \end{align*}
               \end{itemize}
         \item[(c)] \begin{itemize}
-                  \item[(i)] Como $\mu_{g_1} \ll \lambda$ se sigue que no es singular con respecto a $\lambda$.
-                  \item[(ii)] Como $\mu_{g_2} \ll \lambda$ se sigue que no es singular con respecto a $\lambda$.
-                  \item[(iii)] En este caso podemos tomar $\mathbb{Q}$, $\mathbb{Q}^c$ tal que $\mathbb{Q} \cup \mathbb{Q}^c = \mathbb{R}$, $\mathbb{Q} \cap \mathbb{Q}^c = \varnothing$ y \begin{align*}
-                            \mu_{g_3}(\mathbb{Q}^c) = \lambda(\mathbb{Q}) = 0
-                        \end{align*}
-                        Claramente, $\mu_{g_3}(A) = 0 \, \forall A \subseteq \mathbb{Q}^c$ pues \begin{align*}
-                            \mu_{g_3}(A) \leq \bigcup_{n \geq 0} \mu_{g_3}((n\text{, }n+1)) + \mu_{g_3}((-(n+1)\text{,}-n)) = 0
-                        \end{align*}
-                        Luego $\mu_{g_3} \perp \lambda$.
+                  \item[(i)] Como \(\mu_{g_1} \ll \lambda \) se sigue que no es singular con respecto a \(\lambda \).
+                  \item[(ii)] Como \(\mu_{g_2} \ll \lambda \) se sigue que no es singular con respecto a \(\lambda \).
+                  \item[(iii)] Consideremos \( \{ 0 \}  \) y \( \mathbb{R} \setminus \{ 0 \} \in \mathcal{B}  \) tales que \( \lambda( \{ 0 \}) = 0 = \mu_{g_3}(\mathbb{R} \setminus \{0\}) \Rightarrow \lambda \perp \mu_{g_3}  \). En efecto,\begin{align*}
+                    \mu_{g_3}((-\infty\text{, }0)) & = \mu_{g_3}\left(\bigcup_{n \geq 1} (-\infty\text{, }-1/n] \right) \leq \sum_{n \geq 1} \mu_{g_3}((-n\text{, }-1/n]) \\
+                    & = \sum_{n \geq 1} ( g_3(-1/n) - \lim_{a \to -\infty} g_3(a) ) = \sum_{n \geq 1} (0 - 0) = 0 \\
+                    & \Rightarrow \mu_{g_3}((-\infty\text{, }0)) = 0 \\
+                  \end{align*}
+                  Además,\begin{align*}
+                    & \mu_{g_3}((0\text{, }+\infty)) = \lim_{b \to +\infty} \mu_{g_3}((0\text{, }b]) = \lim_{b \to +\infty} (g_3(b) - g_3(0)) = \lim_{b \to +\infty} (1 - 1) = 0 \\
+                    & \therefore \mu_{g_3}(\mathbb{R} \setminus \{ 0 \}) = \mu_{g_3}((-\infty\text{, }0)) + \mu_{g_3}((0\text{, }+\infty)) = 0 + 0 = 0 
+                  \end{align*}
                   \item[(iv)] Análogo a (ii).
               \end{itemize}
         \item[(d)] \begin{itemize}
-                  \item[(i)] $\mu_{g_1}(\mathbb{R}) = \int_{\mathbb{R}} 2 \, d\lambda = 2 \cdot \lambda(\mathbb{R}) = +\infty$, por lo que no es finita.
-                  \item[(ii)] $\mu_{g_2}(\mathbb{R}) = \int_{\mathbb{R}} \frac{1}{x^2 + 1} \, d\lambda = \int_{-\infty}^{+\infty} \frac{1}{x^2 + 1} \, dx = \pi < +\infty$, por lo que es finita.
-                  \item[(iii)] $\mu_{g_3}(\mathbb{R}) \leq \mu_{g_3}(\cup_{n \geq 1} (-n\text{, }n]) = \lim_{n \to +\infty} \mu_{g_3}((-n\text{, }n]) = \lim_{n \to +\infty} 1 = 1 < +\infty$, por lo que es finita.
-                  \item[(iv)] $\mu_{g_4}(\mathbb{R}) = \int_{\mathbb{R}} g_4'(x) \, d\lambda(x) = \int_{-\infty}^{+\infty} g_4'(x) \, dx = \int_{0}^{+\infty} 1 \, dx = +\infty$, por lo que no es finita, notemos debido a la igualdad $\lambda$-c.t.p podemos definir $g_4'$ en $x=0$ como $g_4'(0) = 0$.
+                  \item[(i)] \(\mu_{g_1}(\mathbb{R}) = \int_{\mathbb{R}} 2 \, d\lambda = 2 \cdot \lambda(\mathbb{R}) = +\infty \), por lo que no es finita.
+                  \item[(ii)] \(\mu_{g_2}(\mathbb{R}) = \int_{\mathbb{R}} \frac{1}{x^2 + 1} \, d\lambda = \int_{-\infty}^{+\infty} \frac{1}{x^2 + 1} \, dx = \pi < +\infty \), por lo que es finita.
+                  \item[(iii)] \(\mu_{g_3}(\mathbb{R}) \leq \mu_{g_3}(\cup_{n \geq 1} (-n\text{, }n]) = \lim_{n \to +\infty} \mu_{g_3}((-n\text{, }n]) = \lim_{n \to +\infty} 1 = 1 < +\infty \), por lo que es finita.
+                  \item[(iv)] \(\mu_{g_4}(\mathbb{R}) = \int_{\mathbb{R}} g_4'(x) \, d\lambda(x) = \int_{-\infty}^{+\infty} g_4'(x) \, dx = \int_{0}^{+\infty} 1 \, dx = +\infty \), por lo que no es finita, notemos debido a la igualdad \(\lambda \)-c.t.p podemos definir \(g_4' \) en \(x=0 \) como \(g_4'(0) = 0 \).
               \end{itemize}
-        \item[(e)]  Sea $X$ un conjunto medible Borel tal que $\mu_{g_i}(X) = 0$ para $i = 1$, $\cdots$, $4$ y $\mu$ la medida de Borel. Entonces: \begin{itemize}
-                  \item[(i)] $0 = \mu_{g_1}(X) = \int_X 2 \, d\lambda = 2 \cdot \lambda(X) \Rightarrow \lambda(X) = 0 \Rightarrow \mu(X) = 0 \Rightarrow \mu \ll \mu_{g_1}$.
-                  \item[(ii)] Por contrarrecíproco, sea $X$ un conjunto medible Borel tal que $\lambda(A) > 0$, como \begin{align*}
-                        & 1 \geq \frac{1}{x^2 + 1} > 0 \quad \forall x \in \mathbb{R} \Rightarrow \\
-                        & \int_A 1 \, d\lambda = \lambda(A) = \mu(A) \geq \mu_{g_2}(A) = \int_A \frac{1}{x^2 + 1} \, d\lambda > 0 
-                  \end{align*}
-                  Luego, como $\lambda(A) > 0$, se sigue que $\mu(A) > 0$, por lo que $\mu \ll \mu_{g_2}$.
-                  \item[(iii)] Consideremos $X = [1\text{, }2]$ medible Borel, luego, vimos que $\mu_{g_3}([1\text{, }2]) = 0$, pero claramente $\mu([1\text{, }2]) = 1 \neq 0$, por lo que $\mu$ no es absolutamente continua respecto a $\mu_{g_3}$.
-                  \item[(iv)] Consideremos $X = [-2\text{, }-1]$ medible Borel, luego, vimos que $\mu_{g_4}([-2\text{, }-1]) = 0$, pero claramente $\mu([-2\text{, }-1]) = 1 \neq 0$, por lo que $\mu$ no es absolutamente continua respecto a $\mu_{g_4}$.
+        \item[(e)]  Sea \(X \) un conjunto medible Borel tal que \(\mu_{g_i}(X) = 0 \) para \(i = 1 \), \(\cdots \), \(4 \) y \(\mu \) la medida de Borel. Entonces: \begin{itemize}
+                  \item[(i)] \(0 = \mu_{g_1}(X) = \int_X 2 \, d\lambda = 2 \cdot \lambda(X) \Rightarrow \lambda(X) = 0 \Rightarrow \mu(X) = 0 \Rightarrow \mu \ll \mu_{g_1} \).
+                  \item[(ii)] Por contrarrecíproco, sea \(X \) un conjunto medible Borel tal que \(\lambda(A) > 0 \), como \begin{align*}
+                             & 1 \geq \frac{1}{x^2 + 1} > 0 \quad \forall x \in \mathbb{R} \Rightarrow                                 \\
+                             & \int_A 1 \, d\lambda = \lambda(A) = \mu(A) \geq \mu_{g_2}(A) = \int_A \frac{1}{x^2 + 1} \, d\lambda > 0
+                        \end{align*}
+                        Luego, como \(\lambda(A) > 0 \), se sigue que \(\mu(A) > 0 \), por lo que \(\mu \ll \mu_{g_2} \).
+                  \item[(iii)] Consideremos \(X = [1\text{, }2] \) medible Borel, luego, vimos que \(\mu_{g_3}([1\text{, }2]) = 0 \), pero claramente \(\mu([1\text{, }2]) = 1 \neq 0 \), por lo que \(\mu \) no es absolutamente continua respecto a \(\mu_{g_3} \).
+                  \item[(iv)] Consideremos \(X = [-2\text{, }-1] \) medible Borel, luego, vimos que \(\mu_{g_4}([-2\text{, }-1]) = 0 \), pero claramente \(\mu([-2\text{, }-1]) = 1 \neq 0 \), por lo que \(\mu \) no es absolutamente continua respecto a \(\mu_{g_4} \).
               \end{itemize}
     \end{itemize}
 \end{proof}
 
 \begin{statement}{11}
-    Sean $\lambda_1$ y $\lambda_2$ las medidas de Lebesgue sobre los borelianos de $\mathbb{R}$ y $\mathbb{R}^2$ respectivamente. Identificando el conjunto $\{(x, y) \in \mathbb{R}^2 : y = 0\}$ con $\mathbb{R}$, definamos las siguientes medidas sobre los borelianos de $\mathbb{R}^2$:
+    Sean \(\lambda_1 \) y \(\lambda_2 \) las medidas de Lebesgue sobre los borelianos de \(\mathbb{R} \) y \(\mathbb{R}^2 \) respectivamente. Identificando el conjunto \(\{(x, y) \in \mathbb{R}^2 : y = 0\} \) con \(\mathbb{R} \), definamos las siguientes medidas sobre los borelianos de \(\mathbb{R}^2 \):
     \begin{align*}
-        \mu_1(A) & = \lambda(A_1 \cap \{(x, y) \in \mathbb{R}^2 : y = 0\}) + \int_A e^{-(x^2 + y^2)} \, d\lambda_2(x, y) \\
+        \mu_1(A) & = \lambda(A \cap \{(x, y) \in \mathbb{R}^2 : y = 0\}) + \int_A e^{-(x^2 + y^2)} \, d\lambda_2(x, y) \\
         \mu_2(A) & = \lambda_2(A \cap \{(x, y) \in \mathbb{R}^2 : x^2 + y^2 = 1\})
     \end{align*}
 
-    Calcular la descomposición de Lebesgue de $\mu_1$ respecto a $\mu_2$.
+    Calcular la descomposición de Lebesgue de \(\mu_1 \) respecto a \(\mu_2 \).
 \end{statement}
 
 \begin{proof}
-
+    Consideremos los espacios de medida \( (\mathbb{R}\text{, }\mathcal{B}\text{, }\lambda|_{\mathcal{B}}) \) y \( (\mathbb{R}^2\text{, }\mathcal{B}_2\text{, }\lambda|_{\mathcal{B}_2})  \).
+    Sean\begin{align*}
+        B & = \{ (x \text{, } y) \in \mathbb{R}^2 : x^2 + y^2 = 1 \} \\
+        C & = \{ (x \text{, } y) \in \mathbb{R}^2 : y = 0 \}
+    \end{align*}
+    Dado \( A \in \mathcal{B}_2  \) definimos\begin{align*}
+        \mu_1(A) & = \lambda(A \cap C) + \int_A e^{-(x^2 + y^2)} \, d\lambda_2(x, y) \\
+        \mu_2(A) & = \lambda_2(A \cap B)
+    \end{align*}
+    Queremos hallar la descomposición de Lebesgue de \( \mu_1  \) respecto a \( \mu_2  \). Notemos que \begin{align*}
+         & \mu_2(A) = \lambda_2(A \cap B) \leq \lambda_2(B) = 0 \quad \forall A \in \mathcal{B}_2 \\
+         & \mu_2(A) = 0 \quad \forall A \in \mathcal{B}_2                                         \\
+         & \Rightarrow \mu_2 \text{ es } \sigma\text{-finita.}
+    \end{align*}
+    Para ver que \( \mu_1  \) es \( \sigma  \)-finita, consideremos \begin{align*}
+        & E_n = \{  (x\text{, }y) \in \mathbb{R}^2 : \| (x\text{, } y) \| \leq n \} \\
+        & \bigcup_{n \geq 1} E_n = \mathbb{R}^2 \\
+        & \mu_1(E_n) = \lambda(E_n \cap C) + \int_{E_n} e^{-(x^2 + y^2)} \, d\lambda_2(x, y) \\
+        & =^* \lambda([-n\text{, }n]) + \int_{E_n} e^{-(x^2 + y^2)} \, d\lambda_2(x, y) \\
+        & \leq 2 \cdot n + \pi < +\infty \quad \forall n \in \mathbb{N}
+    \end{align*}
+    * Pues si\begin{align*}
+        E_n \cap C & = \{ (x\text{, }y) \in \mathbb{R}^2 : x^2 + y^2 \leq n^2 \text{ e } y = 0\} \\
+        & = \{ (x\text{, }0) \in \mathbb{R}^2 : x \in [-n\text{, }n] \} \\
+        & \text{  que lo identificamos con } [-n\text{, }n] \subset \mathbb{R}
+    \end{align*}
+    Luego, \( \mu_1  \) es \( \sigma  \)-finita. Por lo tanto, existe una única descomposición de Lebesgue de \( \mu_1  \) respecto a \( \mu_2  \). Con\begin{align*}
+        & \mu_1 = \alpha + \beta \\
+        & \alpha \ll \mu_2 \text{ y } \beta \perp \mu_2 \\
+        & \text{donde } \alpha = 0 \text{ y } \beta = \mu_1
+    \end{align*}
+    En efecto, si \( A \in \mathcal{B}_2  \) tal que \( \mu_1(A) = 0  \), entonces \( \mu_2(A^c) = 0  \). Como \( \mathbb{R}^2 = A \cup A^c  \) y \( \mu_1(A) = \mu_2(A^c) = 0  \), se sigue que \( \mu_1 \perp \alpha = \mu_2  \).
+    Además, \( \mu_1 \ll \mu_1 = \beta  \) y \( \mu_1 = \alpha + \beta = 0 + \mu_1  = \mu_1  \) y la descomposición de Lebesgue es única, por lo que \( \alpha = 0  \) y \( \beta = \mu_1  \).
 \end{proof}
 
 \end{document}
